@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>wala</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function getvalue(){
+			var un = prompt("enter name:","name here");
+			if (un == "user") {
+				getDB();
+			}
+		}
+		function getDB(){
+			var dob = prompt("enter nic without v","nic here");
+			var value = dob;
+			sum = 0;
+			var i=7;
+			while(i>0){
+				value = Math.floor(value/10);
+				i--;
+
+			}
+			if (value<=5) {
+				alert("you are a lucky person");
+			}
+			else{
+				alert("you do not have a lucky NIC number");
+			}
+		}
+	</script>
+
+	<form>
+		<input type="button" value="click me" onclick="getvalue();">
+	</form>
+</body>
+</html>
